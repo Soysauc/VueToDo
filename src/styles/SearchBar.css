@@ -1,0 +1,29 @@
+.searchbar {
+  display: flex;
+  max-width: 313px;
+  padding: 15px;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: #292639;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  margin: 14px auto;
+}
+.searchbar input {
+  font-family: 'Poppins';
+  background-color: #292639;
+  border: none;
+  color: white;
+  text-decoration: none;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.searchbar input::placeholder {
+  color: white;
+}

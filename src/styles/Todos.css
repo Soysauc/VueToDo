@@ -1,0 +1,106 @@
+.todos {
+  background-color: #292639;
+  height: 84px;
+  width: 343px;
+  border-radius: 10px;
+  margin: 0 17px 16px 17px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* Parent container needs to be set to position: relative */
+}
+.todo__item {
+  display: flex;
+}
+
+.todos:hover {
+  background-color: #3b3753;
+  transition: 0.3s ease-in-out;
+}
+
+.todos__circle {
+  margin: 20px 16px;
+  transition: 0.3s ease-in-out;
+}
+
+.todos:hover .todos__circle circle {
+  fill: #292639;
+}
+.todo__item-text {
+  color: #fff;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  max-width: 200px;
+  max-height: 30px;
+  overflow-x: auto;
+  /*I added scroll here too just in case its greater than the max-height*/
+}
+.todos__content {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0;
+  gap: 8px;
+}
+.todo__item-id {
+  color: var(--gray-4, #bdbdbd);
+  font-family: Poppins;
+  max-width: 39px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  border-radius: 6px;
+  background: #3f3c4e;
+  display: inline-flex;
+  padding: 5px 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.todos:hover .todo__item-id {
+  background: #292639;
+}
+.todos__check {
+  margin: 20px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+  background-color: #6bdd8a;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  font-family: 'Poppins';
+  width: 120px;
+  background-color: #3c3850;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; /* Position the tooltip above the text */
+  left: 60%;
+  margin-left: -60px; /* Use half of the width to center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
