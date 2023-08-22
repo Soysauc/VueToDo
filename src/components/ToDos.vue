@@ -17,7 +17,7 @@
               height="14"
               viewBox="0 0 20 14"
               fill="none"
-              @click="markAsOpen(todo.id)"
+              @click="handleMarkAsOpen(todo.id)"
             >
               <mask
                 id="mask0_2_479"
@@ -94,7 +94,7 @@
     <EditItem
       v-else
       :currentTodo="editingTodo"
-      :editTodo="editTodo"
+      :editTodo="addTodo"
       @toggleForm="stopEditing"
     />
   </div>
@@ -132,6 +132,9 @@ export default {
       this.filterTodos();
     },
   },
+   mounted() {
+    this.filterTodos();
+  },
   methods: {
     startEditing(todo) {
       this.editingTodo = todo;
@@ -155,6 +158,9 @@ export default {
     setQuote(id, state) {
       this.quoteId = state ? id : null;
     },
+    handleMarkAsOpen(id) {
+    this.$emit('markAsOpen', id);
+  }
   },
 };
 </script>

@@ -86,9 +86,13 @@ export default {
       this.selectedStatus = "";
       this.toggleForm();
     },
-    handleBackButton() {
-      this.toggleForm();
-    },
+    // handleBackButton() {
+    //   this.toggleForm();
+    // },
+      handleBackButton() {
+    this.$emit('toggleForm'); // emit an event to parent
+  }
+
   },
 };
 </script>

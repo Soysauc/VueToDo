@@ -95,9 +95,6 @@ export default {
     //ehh this is different
     setView(viewType) {
   this.view = viewType;
-   console.log('Current View:', this.view);
-  console.log('Open Todos:', this.openTodos);
-  console.log('Closed Todos:', this.closedTodos);
      },
 
 
@@ -106,6 +103,8 @@ export default {
     },
 
     markAsOpen(id) {
+        console.log('markAsOpen called with ID:', id);
+
       this.todos = this.todos.map(todo => (todo.id === id ? { ...todo, completed: false } : todo));
     },
 
@@ -114,6 +113,7 @@ export default {
     },
 
     toggleForm() {
+
       this.showForm = !this.showForm;
     },
 
