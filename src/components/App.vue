@@ -30,11 +30,11 @@
           v-if="view === 'open'"
           :todos="openTodos"
           type="open"
-          @addTodo="addTodo"
-          @markAsCompleted="markAsCompleted"
-          @markAsOpen="markAsOpen"
-          @toggleEditForm="toggleEditForm"
+          :markAsCompleted="markAsCompleted"
+          :markAsOpen="markAsOpen"
+          :toggleEditForm="toggleEditForm"
         />
+
         <ToDos
           v-else
           :todos="closedTodos"

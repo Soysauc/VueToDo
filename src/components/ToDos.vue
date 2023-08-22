@@ -94,7 +94,7 @@
     <EditItem
       v-else
       :currentTodo="editingTodo"
-      @editTodo="addTodo"
+      :editTodo="editTodo"
       @toggleForm="stopEditing"
     />
   </div>
