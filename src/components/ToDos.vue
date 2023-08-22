@@ -160,6 +160,6 @@ export default {
 </script>
 
 <style scoped>
-@import './styles/Todos.css';
-@import './styles/App.css';
+@import '../assets/Todos.css';
+@import '../assets/App.css';
 </style>

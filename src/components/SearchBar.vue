@@ -39,11 +39,18 @@ export default {
     };
   },
   methods: {
-    handleInputChange() {
-      this.handleSearch(this.searchInput);
-    },
+  handleInputChange() {
+    this.$emit('search', this.searchInput);
   },
+},
+  // methods: {
+  //   handleInputChange() {
+  //     this.handleSearch(this.searchInput);
+  //   },
+  // },
 };
 </script>
 
-<style scoped src="./styles/SearchBar.css"></style>
+<style scoped>
+@import '../assets/SearchBar.css';
+</style>

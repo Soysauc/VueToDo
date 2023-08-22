@@ -51,11 +51,11 @@
 </template>
 
 <script>
-import EllipseS from './components/EllipseS.vue';
-import ToDos from './components/ToDos.vue';
-import AddNew from './components/AddNew.vue';
-import NewTodoForm from './components/NewTodoForm.vue';
-import fetchTodos from  "../API/fetchTodos" ;
+import EllipseS from './Ellipse.vue';
+import AddNew from './AddNew.vue';
+import NewTodoForm from './NewTodoForm.vue';
+import {fetchTodos} from  "../API/fetchTodos" ;
+import ToDos from "./Todos.vue"
 export default {
   name: 'App',
 
@@ -92,6 +92,15 @@ export default {
       localStorage.setItem('todos', JSON.stringify(this.todos));
     },
 
+    //ehh this is different
+    setView(viewType) {
+  this.view = viewType;
+   console.log('Current View:', this.view);
+  console.log('Open Todos:', this.openTodos);
+  console.log('Closed Todos:', this.closedTodos);
+     },
+
+
     markAsCompleted(id) {
       this.todos = this.todos.map(todo => (todo.id === id ? { ...todo, completed: true } : todo));
     },
@@ -126,4 +135,6 @@ export default {
 };
 </script>
 
-<style scoped src="./styles/App.css"></style>
+<style scoped>
+@import '../assets/App.css';
+</style>

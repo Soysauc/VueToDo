@@ -102,4 +102,6 @@ export default {
 };
 </script>
 
-<style scoped src="./styles/EditItem.css"></style>
+<style scoped>
+@import '../assets/EditItem.css';
+</style>

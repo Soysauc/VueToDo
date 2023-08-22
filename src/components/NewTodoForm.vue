@@ -93,4 +93,6 @@ export default {
 };
 </script>
 
-<style scoped src="./styles/NewTodoForm.css"></style>
+<style scoped>
+@import '../assets/NewTodoForm.css';
+</style>

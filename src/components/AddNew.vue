@@ -39,4 +39,6 @@ export default {
 }
 </script>
 
-<style scoped src="./styles/AddNew.css"></style>
+<style scoped>
+@import '../assets/AddNew.css';
+</style>
