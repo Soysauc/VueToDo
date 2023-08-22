@@ -94,7 +94,7 @@
     <EditItem
       v-else
       :currentTodo="editingTodo"
-      :editTodo="addTodo"
+      @requestEditTodo="handleEditTodo"
       @toggleForm="stopEditing"
     />
   </div>
@@ -140,6 +140,7 @@ export default {
       this.editingTodo = todo;
       this.toggleEditForm();
     },
+
     stopEditing() {
       this.editingTodo = null;
       this.toggleEditForm();

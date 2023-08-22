@@ -89,15 +89,19 @@ export default {
         completed: this.selectedStatus === "Completed" ? true : false,
       };
 
-      this.editTodo(updatedTodoItem, !!this.currentTodo);
+      // this.editTodo(updatedTodoItem, !!this.currentTodo);
+               this.$emit('editTodo', updatedTodoItem); // Emitting the event with data
+
+
+
+
       this.editedTodo = "";
       this.selectedUser = "";
       this.selectedStatus = "";
-      this.toggleForm();
+               this.$emit('toggleForm');
+
     },
-    // handleBackButton() {
-    //   this.toggleForm();
-    // },
+
       handleBackButton() {
     this.$emit('toggleForm'); // emit an event to parent
   }

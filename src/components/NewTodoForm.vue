@@ -78,13 +78,17 @@ export default {
         completed: this.selectedStatus === "Completed" ? true : false,
       };
 
-      this.addTodo(newTodoItem);
+      // this.addTodo(newTodoItem);
+         this.$emit('addTodo', newTodoItem); // Emitting the event with data
+
       console.log(newTodoItem);
 
       this.newTodo = "";
       this.selectedUser = "";
       this.selectedStatus = "";
-      this.toggleForm();
+         this.$emit('toggleForm');
+
+      // this.toggleForm();
     },
     // handleBackButton() {
     //   this.toggleForm();
